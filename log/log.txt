@@ -1,0 +1,47 @@
+Here's a sample server output :
+---------------------------------------
+use the existing database(y/n) ?y
+server ready
+
+closing server
+------------------------------------------------------------------------------------------------------------
+Here's a sample client output :
+----------------------------------------
+Enter the query :
+url
+query result :
+[{'url': 'www.NXLJHUtWob.net'}, {'url': 'www.ohqQsCkwVRcMb.net'}, {'url': 'www.OMoJVaBqxzkE.com'}, {'url': 'www.qxzHNnTSYoGy.edu'}, {'url': 'www.INRKmPLqircJhD.net'}, {'url': 'www.iPWRGSdfBxjZ.edu'}]
+ do you want to continue (y/n) :y
+ Enter the query :
+features:url-www.qxzHNnTSYoGy.edu
+query result :
+{'medium_screen_size': True, 'media_queries': True, 'small_screen_size': True, 'local_storage': True, 'large_screen_size': True, 'camera': True, 'app_cache': True}
+ do you want to continue (y/n) :y
+ Enter the query :
+media_queris,url:small_screen_size-true
+query result :
+check your query no such field in table'media_queris'
+ do you want to continue (y/n) :n
+closing client
+
+--------------------------------------------------------------------------------------------------------
+sample log file
+
+TIME:Sat Mar 16 08:19:37 2013
+ACCEPT:('127.0.0.1', 43240)
+TIME:Sat Mar 16 08:21:03 2013
+CLIENT:('127.0.0.1', 43240)
+QUERY:url
+TIME:Sat Mar 16 08:21:23 2013
+ACCEPT:('127.0.0.1', 57843)
+TIME:Sat Mar 16 08:21:52 2013
+CLIENT:('127.0.0.1', 57843)
+QUERY:screen_size:url-www.NXLJHUtWob.net
+TIME:Sat Mar 16 08:22:00 2013
+CLOSE:('127.0.0.1', 57843)
+TIME:Sat Mar 16 08:25:55 2013
+CLIENT:('127.0.0.1', 43240)
+QUERY:camera
+TIME:Sat Mar 16 08:25:56 2013
+CLOSE:('127.0.0.1', 43240)
+---------------------------------------------------------------------------------------------------------
